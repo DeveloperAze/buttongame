@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta  charset="UTF-8">
+        <link rel="stylesheet" href="button game.css">
+    </head>
+<body>
+    
+    <button type="button" id="btn"></button>
+
+    <script>
+        var count=0,xpos,ypos,obj;
+        obj=document.querySelector('#btn');
+        obj.onmouseover=function(){
+            count++;
+            xpos=parseInt(Math.random()*1000);
+            ypos=parseInt(Math.random()*500);
+            obj.style.left=xpos+"px";
+            obj.style.top=ypos+"px";
+            obj.style.width=this.clientWidth+10+"px";
+            obj.style.height=this.clientHeight+10+"px";
+        
+        }
+        obj.onclick=function(){
+            alert(count+". defede qazandin");
+            obj.style.witdh="110px";
+            obj.style.height="110px";
+            count=0;
+        }
+    </script>
+</body>
+</html>
